@@ -1,0 +1,9 @@
+- [ ] finalize nodes for ingestion
+    - [ ] Upload validator
+    - [ ] Table text classifier
+    - [ ] Financial Fact Extractor
+    - [ ] Summarizer
+    - [ ] Chunk
+    - [ ] Embeddings
+    - [ ] Vector Store
+- [ ] fi nalize nodes for agent
