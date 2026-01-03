@@ -1,6 +1,6 @@
 - [ ] finalize nodes for ingestion
     - [.] Upload validator
-    - [ ] Parsing
+    - [.] Parsing
     - [ ] Text classifier (Labeling)
     - [ ] Financial Fact Extractor (would get Json from blocks)
     - [ ] Summarizer

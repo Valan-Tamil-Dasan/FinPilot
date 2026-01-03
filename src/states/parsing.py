@@ -1,5 +1,7 @@
 from typing import Literal, Optional, TypedDict
 
+from docling_core.types.doc.base import BoundingBox
+
 class ParseInput(TypedDict):
     """
     Input State for Parser Node
@@ -17,7 +19,7 @@ class DocumentBlock(TypedDict):
     content : str
     page : int
     order : int
-    # bbox
+    bbox : BoundingBox
 
 class DocumentMetaData(TypedDict):
     """
@@ -27,8 +29,8 @@ class DocumentMetaData(TypedDict):
     page_count : int
     parser : Literal["docling"]
     extraction_timestamp : str
-    company : Optional[str]
-    year : Optional[str]
+    # detected_company : Optional[str]
+    # detected_year : Optional[str]
 
 class ParsedDocument(TypedDict):
     """

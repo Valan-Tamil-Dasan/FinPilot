@@ -1,6 +1,5 @@
 from typing import cast
 from src.states.financial_profile import FinancialProfile, IngestState
-from docling.document_converter import DocumentConverter
 import os
 import pdfplumber
 from pypdf import PdfReader
@@ -11,7 +10,6 @@ MIN_PAGES = 1
 MIN_CHAR_COUNT = 500
 MAX_PAGES = 30
 
-converter = DocumentConverter()
 
 def financial_document_validator(state: IngestState) -> FinancialProfile:
     """
