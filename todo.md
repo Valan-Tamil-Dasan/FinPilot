@@ -1,9 +1,10 @@
 - [ ] finalize nodes for ingestion
-    - [ ] Upload validator
-    - [ ] Table text classifier
-    - [ ] Financial Fact Extractor
+    - [.] Upload validator
+    - [ ] Parsing
+    - [ ] Text classifier (Labeling)
+    - [ ] Financial Fact Extractor (would get Json from blocks)
     - [ ] Summarizer
     - [ ] Chunk
     - [ ] Embeddings
     - [ ] Vector Store
-- [ ] fi nalize nodes for agent
+- [ ] finalize nodes for agent
