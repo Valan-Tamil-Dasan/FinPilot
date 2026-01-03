@@ -20,22 +20,22 @@ def financial_document_validator(state: IngestState) -> FinancialProfile:
     # Technical
 
     if not os.path.exists(pdf_path):
-        return {"technical_ok": False, "reject_reason": "FILE_NOT_FOUND"}
+        return {"pdf_path" : pdf_path, "technical_ok": False, "reject_reason": "FILE_NOT_FOUND"}
 
     if not pdf_path.lower().endswith(".pdf"):
-        return {"technical_ok": False, "reject_reason": "NOT_A_PDF"}
+        return {"pdf_path" : pdf_path, "technical_ok": False, "reject_reason": "NOT_A_PDF"}
 
     if os.path.getsize(pdf_path) > MAX_FILE_SIZE_MB * 1024 * 1024:
-        return {"technical_ok": False, "reject_reason": "FILE_TOO_LARGE"}
+        return {"pdf_path" : pdf_path, "technical_ok": False, "reject_reason": "FILE_TOO_LARGE"}
 
     try:
         reader = PdfReader(pdf_path)
         page_count = len(reader.pages)
     except Exception:
-        return {"technical_ok": False, "reject_reason": "PDF_CORRUPTED"}
+        return {"pdf_path" : pdf_path, "technical_ok": False, "reject_reason": "PDF_CORRUPTED"}
 
     if page_count < MIN_PAGES:
-        return {"technical_ok": False, "reject_reason": "TOO_FEW_PAGES"}
+        return {"pdf_path" : pdf_path, "technical_ok": False, "reject_reason": "TOO_FEW_PAGES"}
 
     # Text Layer
 
@@ -47,22 +47,22 @@ def financial_document_validator(state: IngestState) -> FinancialProfile:
                 if text:
                     full_text += text
     except Exception:
-        return {"technical_ok": False, "reject_reason": "TEXT_EXTRACTION_FAILED"}
+        return {"pdf_path" : pdf_path, "technical_ok": False, "reject_reason": "TEXT_EXTRACTION_FAILED"}
 
     if len(full_text.strip()) < MIN_CHAR_COUNT:
-        return {"technical_ok": False, "reject_reason": "NO_EXTRACTABLE_TEXT"}
+        return {"pdf_path" : pdf_path, "technical_ok": False, "reject_reason": "NO_EXTRACTABLE_TEXT"}
 
     # Language
 
     try:
         if detect(full_text) != "en":
-            return {"technical_ok": False, "reject_reason": "NON_ENGLISH_DOCUMENT"}
+            return {"pdf_path" : pdf_path, "technical_ok": False, "reject_reason": "NON_ENGLISH_DOCUMENT"}
     except Exception:
-        return {"technical_ok": False, "reject_reason": "LANG_DETECTION_FAILED"}
+        return {"pdf_path" : pdf_path, "technical_ok": False, "reject_reason": "LANG_DETECTION_FAILED"}
 
     # Accepted
 
-    return {"technical_ok": True}
+    return {"pdf_path" : pdf_path, "technical_ok": True, "reject_reason" : None}
 
 # state = cast(IngestState,{"pdf_path" : "assets/World_Bank_Group_Annual_Report_2025.pdf"})
 # print(financial_document_validator(state))

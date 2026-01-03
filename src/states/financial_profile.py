@@ -6,7 +6,7 @@ class IngestState(TypedDict):
     """
     pdf_path: str
 
-class FinancialProfile(TypedDict, total=False):
+class FinancialProfile(TypedDict):
     """
     Profile of the document financially
     """
