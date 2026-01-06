@@ -5,6 +5,7 @@ from src.nodes.document_parsing_node import document_parsing_node
 from src.nodes.financial_document_validator import financial_document_validator
 from src.nodes.table_distillizer import table_distillizer
 
+from src.nodes.validation_router import validation_router
 from src.states.ingestion import IngestState
 
 
@@ -20,7 +21,7 @@ def get_builder():
     register_nodes(builder)
 
     builder.add_edge(START, "financial_document_validator")
-    builder.add_edge("financial_document_validator", "document_parsing_node")
+    builder.add_conditional_edges("financial_document_validator", validation_router,{"accept" : "document_parsing_node", "reject" : END})
     builder.add_edge("document_parsing_node", "semantic_distillation_router")
     builder.add_edge("semantic_distillation_router", "table_distillizer")
     builder.add_edge("table_distillizer", END)

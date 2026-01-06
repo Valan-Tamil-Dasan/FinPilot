@@ -9,3 +9,5 @@
     - [ ] Vector Store
 - [ ] finalize nodes for agent
 - [ ] change the prints to proper logger
+- [ ] conditional routers for node failures 
+- [ ] async
