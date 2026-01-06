@@ -1,8 +1,5 @@
 from typing import TypedDict
-
 from docling_core.types.doc.base import BoundingBox
-
-from src.states.parsing import DocumentBlock
 from src.states.table_distllizer import TableSummary
 from src.states.text_distillizer import BLOCK_TYPES, TextSummary 
 

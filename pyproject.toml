@@ -9,6 +9,7 @@ dependencies = [
     "dotenv>=0.9.9",
     "langchain>=1.2.0",
     "langchain-groq>=1.1.1",
+    "langchain-text-splitters>=1.1.0",
     "langdetect>=1.0.9",
     "langgraph>=1.0.5",
     "langgraph-cli[inmem]>=0.4.11",

@@ -8,6 +8,7 @@ from src.nodes.table_distillizer import table_distillizer
 
 from src.nodes.text_distillizer import text_distillizer
 from src.nodes.validation_router import validation_router
+from src.nodes.chunker import chunker
 from src.states.ingestion import IngestState
 
 
@@ -18,6 +19,7 @@ def register_nodes(builder : StateGraph):
     builder.add_node("table_distillizer", table_distillizer)
     builder.add_node("text_distillizer", text_distillizer)
     builder.add_node("knowledge_merger", knowledge_merger)
+    builder.add_node("chunker",chunker)
 
 
 def get_builder():
@@ -31,6 +33,7 @@ def get_builder():
     builder.add_edge("semantic_distillation_router", "text_distillizer")
     builder.add_edge("table_distillizer", "knowledge_merger")
     builder.add_edge("text_distillizer", "knowledge_merger")
-    builder.add_edge("knowledge_merger", END)
+    builder.add_edge("knowledge_merger", "chunker")
+    builder.add_edge("chunker", END)
     
     return builder
