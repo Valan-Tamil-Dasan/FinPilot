@@ -1,5 +1,5 @@
 from functools import lru_cache
-from src.graph.builder import get_builder 
+from src.agent.builder import get_builder 
 
 @lru_cache
 def get_graph():

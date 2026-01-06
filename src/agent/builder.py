@@ -1,6 +1,6 @@
 from langgraph.graph import START, StateGraph
 from langgraph.prebuilt import ToolNode, tools_condition
-from src.graph.state import State
+from src.agent.state import State
 from src.nodes.test import tool_calling_llm
 from src.tools.test import TOOLS
 

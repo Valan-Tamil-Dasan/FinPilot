@@ -95,8 +95,8 @@ def document_parsing_node(state : ParseInput) -> ParsedDocument:
     }
 
 
-state : ParseInput = {
-        "pdf_path" : "assets/One_Page.pdf",
-        } 
-
-print(document_parsing_node(state))
+# state : ParseInput = {
+#         "pdf_path" : "assets/One_Page.pdf",
+#         } 
+#
+# print(document_parsing_node(state))

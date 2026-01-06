@@ -8,7 +8,6 @@ class ParseInput(TypedDict):
     """
     pdf_path : str
     # doc_id : str
-    pass
 
 class DocumentBlock(TypedDict):
     """

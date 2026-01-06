@@ -3,8 +3,9 @@
     - [.] Parsing
     - [ ] Text classifier (Labeling)
     - [ ] Financial Fact Extractor (would get Json from blocks)
-    - [ ] Summarizer
+    - [.] Summarizer
     - [ ] Chunk
     - [ ] Embeddings
     - [ ] Vector Store
 - [ ] finalize nodes for agent
+- [ ] change the prints to proper logger

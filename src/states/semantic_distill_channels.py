@@ -1,7 +1,7 @@
 from typing import TypedDict
 from src.states.parsing import DocumentBlock
 
-class ParsedDocumentBlocks(TypedDict):
+class DocumentBlocks(TypedDict):
     """
     State that contains blocks of Document
     """

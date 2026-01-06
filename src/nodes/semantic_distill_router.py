@@ -1,8 +1,8 @@
 from src.states.parsing import DocumentBlock
-from src.states.semantic_distill_channels import ParsedDocumentBlocks, RoutedBlocks
+from src.states.semantic_distill_channels import DocumentBlocks, RoutedBlocks
 
 
-def semantic_distillation_node(state : ParsedDocumentBlocks) -> RoutedBlocks:
+def semantic_distillation_router(state : DocumentBlocks) -> RoutedBlocks:
     """
     This is a router that sepeartes Table Blocks and Text Blocks 
     """

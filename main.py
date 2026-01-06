@@ -1,3 +1,3 @@
-from src.graph.graph import get_graph
+from src.ingestion.graph import get_graph
 
 graph = get_graph()
