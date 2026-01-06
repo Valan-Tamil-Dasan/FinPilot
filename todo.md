@@ -11,3 +11,4 @@
 - [ ] change the prints to proper logger
 - [ ] conditional routers for node failures 
 - [ ] async
+- [ ] Discard Non Financial Pages
