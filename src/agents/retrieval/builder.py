@@ -1,21 +1,17 @@
-from langgraph.graph import START, StateGraph
-from langgraph.prebuilt import ToolNode, tools_condition
-from src.agents.retrieval.state import State
-from src.nodes.retrieval.test import tool_calling_llm
-from src.tools.test import TOOLS
+from langgraph.graph import END, START, StateGraph
+
+from src.nodes.retrieval.query_translator import query_translator
+from src.states.retrieval.user_query import UserQuery
 
 def register_nodes(builder : StateGraph):
-    builder.add_node("tool_calling_llm" , tool_calling_llm)
-    builder.add_node("tools" , ToolNode(TOOLS))
-
+    builder.add_node("query_translator" , query_translator)
     
 
 def get_builder():
-    builder = StateGraph(State)
+    builder = StateGraph(UserQuery)
     register_nodes(builder)
 
-    builder.add_edge(START, "tool_calling_llm")
-    builder.add_conditional_edges("tool_calling_llm" , tools_condition)
-    builder.add_edge("tools" , "tool_calling_llm")
+    builder.add_edge(START, "query_translator")
+    builder.add_edge("query_translator" , END)
     
     return builder

@@ -1,13 +1,16 @@
-- [ ] finalize nodes for ingestion
+- [ ] finalize nodes for ingestion agent
     - [.] Upload validator
     - [.] Parsing
-    - [ ] Text classifier (Labeling)
+    - [.] Text classifier (Labeling)
     - [ ] Financial Fact Extractor (would get Json from blocks)
     - [.] Summarizer
-    - [ ] Chunk
-    - [ ] Embeddings
-    - [ ] Vector Store
-- [ ] finalize nodes for agent
+    - [.] Chunk
+    - [.] Embeddings
+    - [.] Vector Store
+- [ ] finalize nodes for retrieval agent
+    - [ ] Query Translation
+    - [ ] Retriever
+    - [ ] LLM Answerer
 - [ ] change the prints to proper logger
 - [ ] conditional routers for node failures 
 - [ ] async
