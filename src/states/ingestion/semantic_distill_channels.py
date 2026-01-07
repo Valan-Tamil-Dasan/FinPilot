@@ -1,5 +1,5 @@
 from typing import TypedDict
-from src.states.parsing import DocumentBlock
+from src.states.ingestion.parsing import DocumentBlock
 
 class DocumentBlocks(TypedDict):
     """

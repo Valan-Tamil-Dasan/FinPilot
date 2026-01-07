@@ -1,8 +1,8 @@
 from langchain_core.embeddings import Embeddings
 from langchain_huggingface import HuggingFaceEmbeddings
 from src.runtime.embedding_model import get_embedding_model
-from src.states.chunking import Chunks
-from src.states.embedding import EmbeddedChunk, EmbeddedChunks
+from src.states.ingestion.chunking import Chunks
+from src.states.ingestion.embedding import EmbeddedChunk, EmbeddedChunks
 
 
 

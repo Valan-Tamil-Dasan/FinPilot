@@ -1,5 +1,5 @@
 from typing import Literal
-from src.states.financial_profile import FinancialProfile
+from src.states.ingestion.financial_profile import FinancialProfile
 
 def validation_router(state : FinancialProfile) -> Literal["accept", "reject"]:
     """

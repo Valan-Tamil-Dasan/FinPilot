@@ -1,7 +1,7 @@
 from datetime import datetime, timezone
 import uuid
 from docling_core.types.doc.document import PageItem, ProvenanceItem, TableItem, TextItem
-from src.states.parsing import DocumentBlock, ParseInput, ParsedDocument, DocumentMetaData
+from src.states.ingestion.parsing import DocumentBlock, ParseInput, ParsedDocument, DocumentMetaData
 from docling.document_converter import DocumentConverter
 
 

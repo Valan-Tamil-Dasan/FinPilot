@@ -1,5 +1,5 @@
 from typing import cast
-from src.states.financial_profile import FinancialProfile, IngestState
+from src.states.ingestion.financial_profile import FinancialProfile, IngestState
 import os
 import pdfplumber
 from pypdf import PdfReader

@@ -1,6 +1,6 @@
 from typing import TypedDict
 from docling_core.types.doc.base import BoundingBox
-from src.states.text_distillizer import BLOCK_TYPES
+from src.states.ingestion.text_distillizer import BLOCK_TYPES
 
 
 class Chunk(TypedDict):

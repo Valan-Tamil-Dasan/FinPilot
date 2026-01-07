@@ -1,7 +1,7 @@
 from typing import TypedDict
 
 from docling_core.types.doc.base import BoundingBox
-from src.states.parsing import DocumentBlock
+from src.states.ingestion.parsing import DocumentBlock
 
 class TableBlocks(TypedDict):
     """

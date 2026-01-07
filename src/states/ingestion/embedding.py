@@ -1,5 +1,5 @@
 from typing import Type, TypedDict
-from src.states.chunking import Chunk
+from src.states.ingestion.chunking import Chunk
 
 
 class EmbeddedChunk(Chunk):

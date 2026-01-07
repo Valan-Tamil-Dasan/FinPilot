@@ -1,5 +1,5 @@
-from src.states.parsing import DocumentBlock
-from src.states.semantic_distill_channels import DocumentBlocks, RoutedBlocks
+from src.states.ingestion.parsing import DocumentBlock
+from src.states.ingestion.semantic_distill_channels import DocumentBlocks, RoutedBlocks
 
 
 def semantic_distillation_router(state : DocumentBlocks) -> RoutedBlocks:

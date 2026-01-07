@@ -2,7 +2,8 @@
   "$schema": "https://langgra.ph/schema.json",
   "dependencies": ["."],
   "graphs": {
-    "agent": "./main.py:graph"
+    "ingestion": "./main.py:ingestion_graph",
+    "retrieval" : "./main.py:retrieval_graph"
   },
   "env": ".env",
   "image_distro": "wolfi"

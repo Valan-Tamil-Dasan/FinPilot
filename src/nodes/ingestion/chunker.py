@@ -1,5 +1,5 @@
-from src.states.chunking import Chunk, Chunks
-from src.states.knowledge_merger import MergedBlocks
+from src.states.ingestion.chunking import Chunk, Chunks
+from src.states.ingestion.knowledge_merger import MergedBlocks
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import uuid
 

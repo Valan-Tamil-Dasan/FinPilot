@@ -1,6 +1,6 @@
-from src.prompts.text_distillizer import build_text_distill_messages
+from src.prompts.ingestion.text_distillizer import build_text_distill_messages
 from src.runtime.llms import get_llm
-from src.states.text_distillizer import TextBlocks, TextSummary, TextSummaryBlocks 
+from src.states.ingestion.text_distillizer import TextBlocks, TextSummary, TextSummaryBlocks 
 import json
 
 def text_distillizer(state : TextBlocks) -> TextSummaryBlocks :

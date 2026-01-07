@@ -1,7 +1,7 @@
 from typing import Literal, TypedDict
 
 from docling_core.types.doc.base import BoundingBox
-from src.states.parsing import DocumentBlock
+from src.states.ingestion.parsing import DocumentBlock
 
 
 BLOCK_TYPES = Literal["policy" , "risk", "financial_fact", "statement_line", "auditor_opinion", "profit_driver", "obligation", "auditor_opinion", "management_commentary", "other", "table_summary"]

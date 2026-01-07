@@ -1,17 +1,17 @@
 from langgraph.graph import END, START, StateGraph
 
-from src.nodes.embedder import embedder
-from src.nodes.knowledge_merger import knowledge_merger
-from src.nodes.semantic_distill_router import semantic_distillation_router
-from src.nodes.document_parsing_node import document_parsing_node
-from src.nodes.financial_document_validator import financial_document_validator
-from src.nodes.table_distillizer import table_distillizer
+from src.nodes.ingestion.embedder import embedder
+from src.nodes.ingestion.knowledge_merger import knowledge_merger
+from src.nodes.ingestion.semantic_distill_router import semantic_distillation_router
+from src.nodes.ingestion.document_parsing_node import document_parsing_node
+from src.nodes.ingestion.financial_document_validator import financial_document_validator
+from src.nodes.ingestion.table_distillizer import table_distillizer
 
-from src.nodes.text_distillizer import text_distillizer
-from src.nodes.validation_router import validation_router
-from src.nodes.chunker import chunker
-from src.nodes.vector_store import vector_store_node
-from src.states.ingestion import IngestState
+from src.nodes.ingestion.text_distillizer import text_distillizer
+from src.nodes.ingestion.validation_router import validation_router
+from src.nodes.ingestion.chunker import chunker
+from src.nodes.ingestion.vector_store import vector_store_node
+from src.states.ingestion.ingestion import IngestState
 
 
 def register_nodes(builder : StateGraph):

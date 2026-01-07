@@ -1,6 +1,6 @@
-from src.prompts.table_distillizer import build_table_distill_messages
+from src.prompts.ingestion.table_distillizer import build_table_distill_messages
 from src.runtime.llms import get_llm
-from src.states.table_distllizer import TableBlocks, TableSummaryBlocks, TableSummary
+from src.states.ingestion.table_distllizer import TableBlocks, TableSummaryBlocks, TableSummary
 
 def table_distillizer(state : TableBlocks) -> TableSummaryBlocks:
     """

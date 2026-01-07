@@ -1,5 +1,5 @@
 from inspect import walktree
-from src.states.knowledge_merger import MergedBlocks, NormalizedBlock, SummarizedBlocks
+from src.states.ingestion.knowledge_merger import MergedBlocks, NormalizedBlock, SummarizedBlocks
 
 
 def knowledge_merger(state : SummarizedBlocks) -> MergedBlocks:

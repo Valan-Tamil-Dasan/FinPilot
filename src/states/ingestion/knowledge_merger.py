@@ -1,7 +1,7 @@
 from typing import TypedDict
 from docling_core.types.doc.base import BoundingBox
-from src.states.table_distllizer import TableSummary
-from src.states.text_distillizer import BLOCK_TYPES, TextSummary 
+from src.states.ingestion.table_distllizer import TableSummary
+from src.states.ingestion.text_distillizer import BLOCK_TYPES, TextSummary 
 
 
 class SummarizedBlocks(TypedDict):
