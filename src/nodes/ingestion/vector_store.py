@@ -1,9 +1,6 @@
-from langchain_community.vectorstores import Chroma
-
 from src.runtime.embedding_model import get_embedding_model
 from src.runtime.vector_store import get_vector_store
 from src.states.ingestion.chunking import Chunks
-from src.states.ingestion.embedding import EmbeddedChunks
 
 
 
@@ -16,7 +13,6 @@ def vector_store_node(state : Chunks) -> dict:
     documents = []
     metadatas = []
 
-    embeddings = get_embedding_model()
     vector_store = get_vector_store()
     
     for chunk in chunks:
@@ -36,5 +32,4 @@ def vector_store_node(state : Chunks) -> dict:
         ids=ids
     )
 
-    vector_store.persist()
     return {}

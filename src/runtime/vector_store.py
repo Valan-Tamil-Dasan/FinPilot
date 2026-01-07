@@ -1,6 +1,5 @@
-
 from functools import lru_cache
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 from src.runtime.embedding_model import get_embedding_model
 
 @lru_cache
