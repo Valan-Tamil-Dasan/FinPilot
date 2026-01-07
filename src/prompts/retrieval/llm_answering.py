@@ -19,7 +19,7 @@ def build_llm_answering_messages(user_query : str, translated_query : str, retri
     slabs = []
     for chunk in retrieved_chunks:
         slab = ""
-        slab += f"[Page {chunk['page']}] | [Order {chunk['order']}] | [Type {chunk['financial_type']}]"
+        slab += f"[Page {chunk['page']}] | [Type {chunk['financial_type']}]"
         slab += f"{chunk['content']}"
         slabs.append(slab)
 

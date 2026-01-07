@@ -8,9 +8,10 @@
     - [.] Embeddings
     - [.] Vector Store
 - [ ] finalize nodes for retrieval agent
-    - [ ] Query Translation
-    - [ ] Retriever
-    - [ ] LLM Answerer
+    - [.] Query Translation
+    - [.] Retriever
+    - [.] LLM Answerer
+    - [ ] Reranker
 - [ ] change the prints to proper logger
 - [ ] conditional routers for node failures 
 - [ ] async

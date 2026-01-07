@@ -27,7 +27,7 @@ def knowledge_merger(state : SummarizedBlocks) -> MergedBlocks:
                     "bbox" : table_summaries[i]["bbox"],
                     "block_id" : table_summaries[i]["block_id"],
                     "content" : table_summaries[i]["table_summary"],
-                    "financial_type" : "table_summary",
+                    "financial_type" : "financial_fact",
                     "page" : table_summaries[i]["page"]
              }
             MergeResult["merged_blocks"].append(block)
@@ -50,7 +50,7 @@ def knowledge_merger(state : SummarizedBlocks) -> MergedBlocks:
                 "bbox" : table_summaries[i]["bbox"],
                 "block_id" : table_summaries[i]["block_id"],
                 "content" : table_summaries[i]["table_summary"],
-                "financial_type" : "table_summary",
+                "financial_type" : "financial_fact",
                 "page" : table_summaries[i]["page"]
          }
         MergeResult["merged_blocks"].append(block)

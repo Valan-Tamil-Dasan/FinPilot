@@ -10,7 +10,7 @@ Return ONLY valid JSON array.
 Each item must follow exactly this schema:
 
 {
-  "text_type": "policy | risk | profit_driver | obligation | auditor_opinion | management_commentary | other",
+  "text_type": "policy | risk | profit_driver | obligation | auditor_opinion | management_commentary | other | financial_fact",
   "text_summary": "<concise factual meaning>",
 }
 
