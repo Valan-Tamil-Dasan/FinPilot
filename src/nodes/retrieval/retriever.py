@@ -1,6 +1,4 @@
 from src.runtime.vector_store import get_vector_store
-from src.states.ingestion.chunking import Chunk
-from src.states.ingestion.vector_store_metadata import VectorDBMetaData
 from src.states.retrieval.retrieval import RetrievedChunk, RetrievedChunks
 from src.states.retrieval.user_query import TranslatedQuery
 
@@ -14,7 +12,7 @@ def retriever(state : TranslatedQuery) -> RetrievedChunks:
     vector_store = get_vector_store()
     translated_query = state["translated_query"]
 
-    results = vector_store.similarity_search(translated_query, k=5)
+    results = vector_store.similarity_search(translated_query, k=50)
 
     retrieved_chunks : RetrievedChunks = {
             "retrieved_documents" : []
