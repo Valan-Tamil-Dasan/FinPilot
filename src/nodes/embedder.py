@@ -1,21 +1,24 @@
 from langchain_core.embeddings import Embeddings
 from langchain_huggingface import HuggingFaceEmbeddings
+from src.runtime.embedding_model import get_embedding_model
 from src.states.chunking import Chunks
 from src.states.embedding import EmbeddedChunk, EmbeddedChunks
+
 
 
 def embedder(state : Chunks) -> EmbeddedChunks:
     """
     Embedder Node:
     This converts the Chunks into embeddings
+    This node is for debugging purpose only
     """
 
     embedded_chunks : EmbeddedChunks = {
             "embeddings" : []
     }
     
-    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
-    
+    embeddings = get_embedding_model()    
+
     chunks = state["chunks"]
     texts = [chunk["content"] for chunk in chunks]
     
