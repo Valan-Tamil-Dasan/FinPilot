@@ -16,8 +16,8 @@ class TranslatedQuery(TypedDict):
     user_query : str
     translated_query : str
 
-class FinancialType(TypedDict):
+class QueryLabel(TypedDict):
     """
-    Financial Types : policy | financial_fact etc
+    QueryLabel : policy | financial_fact etc
     """
-    financial_type : str 
+    query_label : str 

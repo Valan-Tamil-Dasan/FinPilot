@@ -8,11 +8,11 @@ def retriever(state : TranslatedQuery) -> RetrievedChunks:
     Retriever node
     This retrieves the Similar Documents using Simillariy Search from Vector DB
     """
-
+    K = 60
     vector_store = get_vector_store()
     translated_query = state["translated_query"]
 
-    results = vector_store.similarity_search(translated_query, k=50)
+    results = vector_store.similarity_search(translated_query, k=K)
 
     retrieved_chunks : RetrievedChunks = {
             "retrieved_documents" : []

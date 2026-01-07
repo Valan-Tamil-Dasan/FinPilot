@@ -15,4 +15,4 @@ class LlmInput(TypedDict):
     """
     user_query : str
     translated_query : str
-    retrieved_documents : list[RetrievedChunk]
+    reranked_documents : list[RetrievedChunk]

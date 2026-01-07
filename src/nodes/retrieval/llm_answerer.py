@@ -8,7 +8,7 @@ def llm_answerer(state : LlmInput) -> LlmAnswer:
     Node : 
     Used for Answering based on retrieved Docs
     """
-    retrieved_documents = state["retrieved_documents"]
+    retrieved_documents = state["reranked_documents"]
     user_query = state["user_query"]
     translated_query = state["translated_query"]
 
@@ -20,5 +20,4 @@ def llm_answerer(state : LlmInput) -> LlmAnswer:
             "answer" : str(response.content)
     }
 
-    print(llm_answer)
     return  llm_answer
