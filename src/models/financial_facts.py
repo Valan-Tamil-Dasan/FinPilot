@@ -2,8 +2,8 @@ from sqlalchemy import Column, String, Numeric, PrimaryKeyConstraint
 from sqlalchemy.dialects.postgresql import UUID
 from .base import Base
 
-class IncomeStatement(Base):
-    __tablename__ = "income_statement"
+class FinancialFacts(Base):
+    __tablename__ = "financial_facts"
 
     company = Column(String, nullable=False)
     period = Column(String, nullable=False)

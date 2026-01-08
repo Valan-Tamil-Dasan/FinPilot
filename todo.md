@@ -11,7 +11,9 @@
     - [.] Query Translation
     - [.] Retriever
     - [.] LLM Answerer
-    - [ ] Reranker
+    - [.] Reranker
+- [ ] Tools
+     -[ ] Single Table Multiple tools
 - [ ] change the prints to proper logger
 - [ ] conditional routers for node failures 
 - [ ] async
