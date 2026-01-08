@@ -121,3 +121,5 @@ def get_metric_trend(company: str, metric: str):
         "metric": metric,
         "trend": trend,
     }
+
+ATOMIC_TOOLS = [get_metric_trend, get_financial_metrics_for_period, get_financial_metric]
