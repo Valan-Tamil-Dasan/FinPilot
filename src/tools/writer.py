@@ -3,7 +3,7 @@ from sqlalchemy.dialects.postgresql import insert
 from src.db.deps import get_db
 from src.models.financial_facts import FinancialFacts
 
-# @tool
+@tool
 def insert_financial_metric(company : str, period : str, metric : str, value : float):
     """
     Insert or update a single numeric income statement metric for a company and period.
@@ -48,7 +48,7 @@ def insert_financial_metric(company : str, period : str, metric : str, value : f
             "metric": metric
         }
 
-# @tool
+@tool
 def batch_insert_financial_metrics(rows: list[dict]):
     """
     Insert or update multiple income statement metrics in bulk.

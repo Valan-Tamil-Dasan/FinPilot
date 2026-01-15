@@ -6,6 +6,7 @@ from src.nodes.ingestion.knowledge_merger import knowledge_merger
 from src.nodes.ingestion.semantic_distill_router import semantic_distillation_router
 from src.nodes.ingestion.document_parsing_node import document_parsing_node
 from src.nodes.ingestion.financial_document_validator import financial_document_validator
+from src.nodes.ingestion.sql_writer import sql_writer
 from src.nodes.ingestion.table_distillizer import table_distillizer
 
 from src.nodes.ingestion.text_distillizer import text_distillizer
@@ -26,6 +27,7 @@ def register_nodes(builder : StateGraph):
     builder.add_node("chunker",chunker)
     # builder.add_node("embedder", embedder)
     builder.add_node("vector_store",vector_store_node)
+    builder.add_node("sql_writer",sql_writer)
 
 
 def get_builder():
@@ -44,5 +46,6 @@ def get_builder():
     builder.add_edge("chunker", "vector_store")
     # builder.add_edge("embedder" , "vector_store")
     builder.add_edge("vector_store", END)
+    builder.add_edge("financial_facts_extractor" , "sql_writer")
     
     return builder
