@@ -1,8 +1,7 @@
 from dotenv import load_dotenv
 from langchain.chat_models import init_chat_model
 from functools import lru_cache
-
-from src.tools.test import TOOLS
+from src.tools.tools import TOOLS
 
 load_dotenv()
 

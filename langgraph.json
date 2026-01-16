@@ -3,7 +3,8 @@
   "dependencies": ["."],
   "graphs": {
     "ingestion": "./main.py:ingestion_graph",
-    "retrieval" : "./main.py:retrieval_graph"
+    "retrieval" : "./main.py:retrieval_graph",
+    "sql_agent" : "./main.py:sql_agent" 
   },
   "env": ".env",
   "image_distro": "wolfi"
