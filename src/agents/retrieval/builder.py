@@ -25,8 +25,8 @@ def get_builder():
     builder.add_edge("query_translator" , "retriever")
     builder.add_edge("retriever", "query_labeller")
     builder.add_edge("query_labeller" , "reranker")
-    builder.add_edge("reranker", "llm_answerer")
-    builder.add_edge("llm_answerer", "end_cap")
-    builder.add_edge("end_cap", END)
+    builder.add_edge("reranker", END)
+    # builder.add_edge("llm_answerer", "end_cap")
+    # builder.add_edge("end_cap", END)
     
     return builder

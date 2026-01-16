@@ -1,12 +1,14 @@
-from typing import TypedDict
+from typing import NotRequired, TypedDict
 
 from src.states.ingestion.text_distillizer import BLOCK_TYPES
+from src.states.retrieval.retrieval import RetrievedChunk
 
 class UserQuery(TypedDict):
     """
     State that shows user query
     """
     user_query : str
+    reranked_documents : NotRequired[list[RetrievedChunk]]
 
 class TranslatedQuery(TypedDict):
     """

@@ -4,7 +4,8 @@
   "graphs": {
     "ingestion": "./main.py:ingestion_graph",
     "retrieval" : "./main.py:retrieval_graph",
-    "sql_agent" : "./main.py:sql_agent" 
+    "sql_agent" : "./main.py:sql_agent",
+    "supervisor_graph" : "./main.py:supervisor_graph"
   },
   "env": ".env",
   "image_distro": "wolfi"
