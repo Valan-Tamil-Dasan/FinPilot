@@ -4,6 +4,14 @@ import operator
 
 from src.states.retrieval.retrieval import RetrievedChunk
 
+
+class SupervisorInput(TypedDict):
+    """
+    A global state SuperVisor
+    """
+    user_query: str
+    final_answer : NotRequired[str] 
+
 class SupervisorState(TypedDict):
     """
     A global state for sql and retrieval subgraphs

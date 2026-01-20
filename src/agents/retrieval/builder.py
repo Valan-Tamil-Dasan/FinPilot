@@ -13,8 +13,8 @@ def register_nodes(builder : StateGraph):
     builder.add_node("retriever",retriever)
     builder.add_node("query_labeller" , query_labeller)
     builder.add_node("reranker", reranker)
-    builder.add_node("llm_answerer",llm_answerer)
-    builder.add_node(end_cap)
+    # builder.add_node("llm_answerer",llm_answerer)
+    # builder.add_node(end_cap)
     
 
 def get_builder():

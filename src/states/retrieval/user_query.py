@@ -23,3 +23,4 @@ class QueryLabel(TypedDict):
     QueryLabel : policy | financial_fact etc
     """
     query_label : str 
+
